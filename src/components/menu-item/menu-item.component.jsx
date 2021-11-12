@@ -1,7 +1,7 @@
 import React from 'react';
 import { withRouter } from 'react-router-dom';
 
-import './menu-item/menu-item.styles.scss'
+import './menu-item.styles.scss'
 
 const MenuItem = ({ title, imageUrl, size, history, linkUrl, match }) => (
     <div  
@@ -21,4 +21,4 @@ const MenuItem = ({ title, imageUrl, size, history, linkUrl, match }) => (
     </div>
 );
 
-export default withRouter(MenuItem);        // by wrapping it we have access to history
+export default withRouter(MenuItem);        // by wrapping it we have access to history and match
