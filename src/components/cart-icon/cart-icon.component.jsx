@@ -1,5 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import { createStructuredSelector } from 'reselect';
 
 import { toggleCartHidden } from '../../redux/cart/cart.actions';
 import { selectCartItemsCount } from '../../redux/cart/cart.selectors';
@@ -23,8 +24,8 @@ const mapDispatchToProps = dispatch => ({
 //     itemCount: cartItems.reduce((accumulatedQuantity, cartItem) => accumulatedQuantity + cartItem.quantity, 0)  // every time a state changes this will be called even if the cart is not changed, NOT GOOD -> MEMOIZATION
 // })
 
-const mapStateToProps = (state) => ({         // with selectors
-    itemCount: selectCartItemsCount(state)
+const mapStateToProps = createStructuredSelector({         // with selectors
+    itemCount: selectCartItemsCount
 })
 
 export default connect(mapStateToProps, mapDispatchToProps)(CartIcon);
