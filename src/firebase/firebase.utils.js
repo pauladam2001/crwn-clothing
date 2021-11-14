@@ -12,6 +12,8 @@ const config = {
     measurementId: "G-4WCRP2FH4V"
 };
 
+firebase.initializeApp(config);
+
 export const createUserProfileDocument = async (userAuth, additionalData) => {
     if (!userAuth) return;
 
@@ -38,7 +40,17 @@ export const createUserProfileDocument = async (userAuth, additionalData) => {
     return userRef;
 }
 
-firebase.initializeApp(config);
+export const addCollectionAndDocuments = async (collectionKey, objectsToAdd) => {       // we used this in componentDidMount in order to add the data in the firestore database, but only one time
+    const collectionRef = firestore.collection(collectionKey);
+
+    const batch = firestore.batch();
+    objectsToAdd.forEach(obj => {
+        const newDocRef = collectionRef.doc();
+        batch.set(newDocRef, obj);
+    });
+
+   return await batch.commit();
+}
 
 export const auth = firebase.auth();
 export const firestore = firebase.firestore();
