@@ -6,7 +6,6 @@ import CollectionsOverviewContainer from '../../components/collections-overview/
 import CollectionPageContainer from '../collection/collection.container';
 
 import { fetchCollectionsStart } from '../../redux/shop/shop.actions';
-import { firestore } from '../../firebase/firebase.utils';
 
 const ShopPage = ({ fetchCollectionsStart, match }) => {
     useEffect(() => {                   // componentDidMount
