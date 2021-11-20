@@ -22,3 +22,5 @@
 - Navigate through shop pages
 - Add/Clear items to/from cart
 - Pay with the *fake card*
+---
+# Demo
