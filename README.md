@@ -15,3 +15,10 @@
 - PWA
 ---
 # Functionalities
+- Sign in with email and password
+- Sign in with Google
+- Sign up
+- Sign out
+- Navigate through shop pages
+- Add/Clear items to/from cart
+- Pay with the *fake card*
