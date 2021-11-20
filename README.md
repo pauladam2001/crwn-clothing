@@ -36,5 +36,3 @@
 - ![cart](https://user-images.githubusercontent.com/72084877/142732748-360c3b30-f0ab-49ef-a137-67b3aa50fe2a.png)
 - Checkout
 - ![checkout](https://user-images.githubusercontent.com/72084877/142732754-240e998b-cb92-4c0c-af3d-22f925368428.png)
-- Stripe
-- ![stripe](https://user-images.githubusercontent.com/72084877/142732767-2ade4020-2ec1-4ce4-af56-f047e00fee98.png)
